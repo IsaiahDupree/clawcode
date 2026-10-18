@@ -1,0 +1,42 @@
+{
+  "name": "clawcode",
+  "version": "0.1.0",
+  "description": "Agentic Discord bot — multi-channel AI assistant with autonomous tool execution",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "clawcode": "./src/entry.ts"
+  },
+  "scripts": {
+    "dev": "tsx src/entry.ts",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "lint": "oxlint .",
+    "test": "vitest run",
+    "deploy-commands": "tsx src/discord/commands/deploy.ts"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "@discordjs/voice": "^0.18.0",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "zod": "^3.24.0",
+    "croner": "^9.0.0",
+    "dotenv": "^16.4.7",
+    "chalk": "^5.4.1",
+    "glob": "^11.0.1",
+    "commander": "^13.1.0",
+    "yaml": "^2.7.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0",
+    "@types/node": "^22.10.0",
+    "@types/uuid": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
